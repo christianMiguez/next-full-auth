@@ -33,3 +33,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+data/_mdb_catalog.wt
+data/collection-0--7915923821361008206.wt
+data/collection-2--7915923821361008206.wt
+data/collection-4--7915923821361008206.wt
+data/collection-7--7915923821361008206.wt
+data/index-1--7915923821361008206.wt
+data/index-3--7915923821361008206.wt
+data/index-5--7915923821361008206.wt
+data/index-6--7915923821361008206.wt
+data/index-8--7915923821361008206.wt
+data/index-9--7915923821361008206.wt
+data/mongod.lock
+data/sizeStorer.wt
+data/storage.bson
+data/WiredTiger
+data/WiredTiger.lock
+data/WiredTiger.turtle
+data/WiredTiger.wt
+data/WiredTigerHS.wt
