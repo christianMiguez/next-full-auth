@@ -1,13 +1,8 @@
-version: "3.8"
-
 services:
-  mongodb:
-    image: mongo:latest
-    container_name: mongodb
+  rest-full-skeleton:
+    image: mongo:5.0.0
+    container_name: rest-ful-skeleton-database
     ports:
-      - "27017:27017"
+      - 27017:27017
     volumes:
-      - ./data:/data/db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: username
-      MONGO_INITDB_ROOT_PASSWORD: password
+      - ./mongo:/data/db
