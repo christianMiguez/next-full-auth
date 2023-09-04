@@ -1,8 +1,11 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import { MongoDBAdapter } from "@auth/mongodb-adapter";
-import clientPromise from "@/lib/mongodb.adapter";
-import { Adapter } from "next-auth/adapters";
+// import { MongoDBAdapter } from "@auth/mongodb-adapter";
+// import clientPromise from "@/lib/mongodb.adapter";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 const handler = NextAuth({
   providers: [
@@ -11,7 +14,8 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
   ],
-  adapter: MongoDBAdapter(clientPromise) as Adapter,
+  // adapter: MongoDBAdapter(clientPromise) as Adapter,
+  adapter: PrismaAdapter(prisma),
   session: {
     strategy: "jwt",
   },
