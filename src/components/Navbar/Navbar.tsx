@@ -31,7 +31,10 @@ export const Navbar = () => {
                   Salir
                 </button>
               ) : (
-                <button onClick={() => signIn()} className="text-red-600 mr-3">
+                <button
+                  onClick={() => signIn("google")}
+                  className="text-red-600 mr-3"
+                >
                   Ingresar
                 </button>
               )}
