@@ -1,13 +1,59 @@
+import getCurrentUser from "@/utils/getCurrentUser";
 import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma.adapter";
+import { Task } from "@prisma/client";
 
-export function GET() {
-  return NextResponse.json({
-    message: "Hello from the API!",
-  });
+export async function GET() {
+  try {
+    const tasks = await prisma.task.findMany();
+    console.log(tasks);
+    return NextResponse.json(tasks);
+  } catch (error: any) {
+    return NextResponse.json(
+      {
+        message: error.message,
+      },
+      {
+        status: 500,
+      }
+    );
+  }
 }
 
-export function POST() {
-  return NextResponse.json({
-    message: "Creando tarea",
-  });
+export async function POST(request: Request) {
+  const currentUser = await getCurrentUser();
+
+  if (!currentUser) {
+    return NextResponse.json(
+      {
+        message: "no user. please login",
+      },
+      {
+        status: 401,
+      }
+    );
+  }
+
+  try {
+    const { title, content } = await request.json();
+
+    const task: Task = await prisma.task.create({
+      data: {
+        title,
+        content,
+        userId: currentUser.id,
+      },
+    });
+
+    return NextResponse.json(task);
+  } catch (error: any) {
+    return NextResponse.json(
+      {
+        message: error.message,
+      },
+      {
+        status: 500,
+      }
+    );
+  }
 }
