@@ -5,7 +5,6 @@ import { headers } from "next/headers";
 
 async function loadTasks() {
   let fetchConfig: any = {
-    cache: "no-store",
     method: "GET",
   };
   if (process.env.NODE_ENV === "development") {
