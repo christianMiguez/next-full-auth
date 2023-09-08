@@ -7,7 +7,7 @@ async function loadTasks() {
   let fetchConfig: any = {
     method: "GET",
   };
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV !== "production") {
     fetchConfig = {
       ...fetchConfig,
       headers: headers(),
