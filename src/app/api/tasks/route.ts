@@ -5,8 +5,12 @@ import { Task } from "@prisma/client";
 
 export async function GET() {
   try {
-    const tasks = await prisma.task.findMany();
-    console.log(tasks);
+    const tasks = await prisma.task.findMany({
+      orderBy: {
+        updatedAt: "desc",
+      },
+    });
+
     return NextResponse.json(tasks);
   } catch (error: any) {
     return NextResponse.json(

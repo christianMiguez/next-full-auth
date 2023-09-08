@@ -8,7 +8,6 @@ import Spinner from "../UI/Spinner/Spinner";
 
 export const Navbar = () => {
   const { data: session, status, update } = useSession();
-  console.log(session);
   return (
     <nav className="bg-black border-gray-200 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -32,7 +31,7 @@ export const Navbar = () => {
                 </button>
               ) : (
                 <button
-                  onClick={() => signIn("google")}
+                  onClick={() => signIn("google", { callbackUrl: "/tasks" })}
                   className="text-red-600 mr-3"
                 >
                   Ingresar
@@ -92,11 +91,11 @@ export const Navbar = () => {
             {session && (
               <li>
                 <Link
-                  href="/dashboard"
+                  href="/tasks"
                   className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                   aria-current="page"
                 >
-                  Dashboard
+                  Tasks
                 </Link>
               </li>
             )}
