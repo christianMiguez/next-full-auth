@@ -4,15 +4,11 @@ import { Task } from "@prisma/client";
 import { headers } from "next/headers";
 
 async function loadTasks() {
-  let fetchConfig: any = {
+  const fetchConfig: any = {
     method: "GET",
+    headers: headers(),
   };
-  if (process.env.NODE_ENV !== "production") {
-    fetchConfig = {
-      ...fetchConfig,
-      headers: headers(),
-    };
-  }
+
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_URL}/api/tasks`,
     fetchConfig
