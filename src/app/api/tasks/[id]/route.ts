@@ -40,6 +40,17 @@ export async function GET(request: Request, { params }: Params) {
       );
     }
 
+    if (currentUser.id !== task.userId) {
+      return NextResponse.json(
+        {
+          message: "you are not the owner of this task",
+        },
+        {
+          status: 401,
+        }
+      );
+    }
+
     return NextResponse.json(task);
   } catch (error: any) {
     return NextResponse.json(
@@ -85,6 +96,17 @@ export async function DELETE(request: Request, { params }: Params) {
       );
     }
 
+    if (currentUser.id !== task.userId) {
+      return NextResponse.json(
+        {
+          message: "you are not the owner of this task",
+        },
+        {
+          status: 401,
+        }
+      );
+    }
+
     return NextResponse.json(task);
   } catch (error: any) {
     return NextResponse.json(
@@ -113,16 +135,16 @@ export async function PUT(request: Request, { params }: Params) {
   }
 
   try {
-    const { title, content, userId } = await request.json();
+    const { title, content } = await request.json();
 
     const task: Task = await prisma.task.update({
       where: {
         id: params.id,
+        userId: currentUser.id,
       },
       data: {
         title,
         content,
-        userId,
       },
     });
 
