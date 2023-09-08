@@ -1,4 +1,4 @@
-import { TaskForm } from "@/components/TaskForm/TaskForm";
+import { TaskForm } from "@/components/Tasks/TaskForm/TaskForm";
 
 const EditTaskPage = () => {
   return (

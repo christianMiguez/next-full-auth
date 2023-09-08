@@ -2,19 +2,14 @@
 import { Task } from "@prisma/client";
 import { useEffect, useState } from "react";
 import TaskRow from "../TaskForm/TaskRow";
-import Spinner from "../UI/Spinner/Spinner";
+import Spinner from "../../UI/Spinner/Spinner";
 
-function TaskTable() {
-  const [tasks, setTasks] = useState<Task[]>([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    fetch("/api/tasks")
-      .then((res) => res.json())
-      .then((json) => {
-        setTasks(json);
-        setLoading(false);
-      });
-  }, []);
+interface TaskTableProps {
+  tasks: Task[];
+  loading: boolean;
+}
+
+function TaskTable({ tasks, loading }: TaskTableProps) {
   return (
     <table className="rounded-l-md rounded-r-md overflow-hidden w-full text-sm text-left text-gray-500 ">
       <thead className="text-xs  text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 ">

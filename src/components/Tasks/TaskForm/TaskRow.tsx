@@ -4,7 +4,7 @@ import { getFormatedDate } from "@/utils";
 import { Task } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import IconDelete from "../UI/Icons/IconDelete";
+import IconDelete from "../../UI/Icons/IconDelete";
 
 interface TaskRowProps {
   task: Task;
