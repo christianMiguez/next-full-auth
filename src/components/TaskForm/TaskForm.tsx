@@ -84,6 +84,7 @@ export const TaskForm = () => {
         console.log(data);
         taskId ? updateTask(data) : createTask(data);
       })}
+      className="mb-6"
     >
       <div>
         <label
@@ -125,7 +126,7 @@ export const TaskForm = () => {
         id="message"
         rows={4}
         className="block p-2.5 w-full text-sm bg-slate-800 rounded-lg border border-gray-800 focus:ring-blue-500 focus:border-blue-500  placeholder-gray-400 text-white mb-4"
-        placeholder="Write your thoughts here..."
+        placeholder="Task description..."
         // value={content}
         // onChange={(e) => setContent(e.target.value)}
         {...register("content", {
