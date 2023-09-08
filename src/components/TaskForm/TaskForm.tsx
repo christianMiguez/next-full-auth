@@ -29,7 +29,7 @@ export const TaskForm = () => {
 
   const createTask = async ({ title, content }: FormValuesProps) => {
     try {
-      await fetch("/api/tasks", {
+      await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tasks`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export const TaskForm = () => {
 
   const updateTask = async ({ title, content }: FormValuesProps) => {
     try {
-      await fetch(`/api/tasks/${taskId}`, {
+      await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tasks/${taskId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ export const TaskForm = () => {
 
   useEffect(() => {
     if (taskId) {
-      fetch(`/api/tasks/${taskId}`)
+      fetch(`${process.env.NEXT_PUBLIC_URL}/api/tasks/${taskId}`)
         .then((res) => res.json())
         .then((data) => {
           setCurrentTask(data);
