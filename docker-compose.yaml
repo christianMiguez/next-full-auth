@@ -1,8 +1,0 @@
-services:
-  rest-full-skeleton:
-    image: mongo:5.0.0
-    container_name: rest-ful-skeleton-database
-    ports:
-      - 27017:27017
-    volumes:
-      - ./mongo:/data/db
