@@ -14,7 +14,10 @@ async function loadTasks() {
       headers: headers(),
     };
   }
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tasks`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/tasks`,
+    fetchConfig
+  );
   const data = await res.json();
   return data;
 }
