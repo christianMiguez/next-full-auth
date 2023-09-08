@@ -4,6 +4,7 @@ const getTasks = async () => {
   let fetchConfig: any = {
     method: "GET",
     next: { revalidate: 1 },
+    cache: "no-store",
   };
   if (process.env.NODE_ENV !== "production") {
     fetchConfig = {
