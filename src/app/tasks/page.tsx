@@ -5,6 +5,7 @@ import { Task } from "@prisma/client";
 
 const TasksPage = async () => {
   const tasks = await getTasks();
+  console.log(tasks);
   return (
     <div className="w-[95%] max-w-[800px] mx-auto my-4">
       <TaskForm />
