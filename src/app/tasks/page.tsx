@@ -1,11 +1,19 @@
 import { TaskForm } from "@/components/TaskForm/TaskForm";
 import TaskRow from "@/components/TaskForm/TaskRow";
-import getTasks from "@/utils/getTasks";
 import { Task } from "@prisma/client";
 
-const TasksPage = async () => {
+async function getTasks() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tasks`);
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function TasksPage() {
   const tasks = await getTasks();
-  console.log(tasks);
   return (
     <div className="w-[95%] max-w-[800px] mx-auto my-4">
       <TaskForm />
@@ -39,6 +47,4 @@ const TasksPage = async () => {
       </table>
     </div>
   );
-};
-
-export default TasksPage;
+}
