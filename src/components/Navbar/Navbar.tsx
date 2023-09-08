@@ -7,7 +7,7 @@ import { NavbarLogo } from "./NavbarLogo";
 import Spinner from "../UI/Spinner/Spinner";
 
 export const Navbar = () => {
-  const { data: session, status, update } = useSession();
+  const { data: session, status } = useSession();
   return (
     <nav className="bg-black border-gray-200 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">

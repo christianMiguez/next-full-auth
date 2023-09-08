@@ -4,6 +4,7 @@ import { getFormatedDate } from "@/utils";
 import { Task } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import IconDelete from "../UI/Icons/IconDelete";
 
 interface TaskRowProps {
   task: Task;
@@ -12,10 +13,6 @@ interface TaskRowProps {
 const TaskRow = ({ task }: TaskRowProps) => {
   const router = useRouter();
   const formatedDate = getFormatedDate(new Date(task.createdAt));
-
-  const handleEdit = (task: Task) => {
-    router.push(`/tasks/${task.id}/edit`);
-  };
 
   const handleDelete = async () => {
     try {
@@ -33,26 +30,23 @@ const TaskRow = ({ task }: TaskRowProps) => {
   };
 
   return (
-    <tr
-      key={task.id}
-      className="bg-white p-3 border-b dark:bg-gray-800 dark:border-gray-700"
-    >
+    <tr key={task.id} className="bg-slate-800 p-3">
       <td className="p-3">{formatedDate}</td>
-      <td className="p-3">{task.title}</td>
+      <td className="p-3 text-white">{task.title}</td>
       <td className="p-3">{task.content}</td>
-      <td className="p-3 text-right">
+      <td className="p-3 text-right flex justify-end">
         <button
           type="button"
-          onClick={() => handleEdit(task)}
-          className="text-white py-2 px-4 bg-slate-600 text-center rounded-md mr-2"
+          onClick={() => router.push(`/tasks/${task.id}/edit`)}
+          className="text-white py-2 px-4 bg-slate-600 text-center rounded-md hover:scale-105 mr-2"
         >
           Editar
         </button>
         <button
           onClick={handleDelete}
-          className="text-white py-2 px-4 bg-red-600 text-center rounded-md"
+          className="text-white py-2 px-4 bg-red-600 text-center rounded-md hover:scale-105"
         >
-          Eliminar
+          <IconDelete />
         </button>
       </td>
     </tr>

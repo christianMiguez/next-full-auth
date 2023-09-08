@@ -11,7 +11,6 @@ export const authOptions: AuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
   ],
-  // adapter: MongoDBAdapter(clientPromise) as Adapter,
   adapter: PrismaAdapter(prisma) as Adapter,
   session: {
     strategy: "jwt",

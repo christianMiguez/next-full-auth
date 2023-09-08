@@ -1,8 +1,6 @@
-import { TaskForm } from "@/components/UI/Forms/TaskForm/TaskForm";
-import TaskRow from "@/components/UI/Forms/TaskForm/TaskRow";
-import { authOptions } from "@/lib/authOptions";
+import { TaskForm } from "@/components/TaskForm/TaskForm";
+import TaskRow from "@/components/TaskForm/TaskRow";
 import { Task } from "@prisma/client";
-import { getServerSession } from "next-auth";
 import { headers } from "next/headers";
 
 async function loadTasks() {
@@ -18,12 +16,11 @@ async function loadTasks() {
 const TasksPage = async () => {
   const tasks = await loadTasks();
   return (
-    <div className="max-w-[80%] mx-auto my-4">
+    <div className="w-[95%] max-w-[800px] mx-auto my-4">
       <TaskForm />
       <h1 className="text-center text-xl font-bold py-3 text-white">Tasks</h1>
-      <table className="rounded-l-md rounded-r-md overflow-hidden w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        {" "}
-        <thead className="text-xs  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <table className="rounded-l-md rounded-r-md overflow-hidden w-full text-sm text-left text-gray-500 ">
+        <thead className="text-xs  text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 ">
           <tr>
             <th scope="col" className="px-6 py-3">
               Date

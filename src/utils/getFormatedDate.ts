@@ -1,10 +1,9 @@
 export const getFormatedDate = (date: Date) => {
   const formatedDate = date.toLocaleDateString("es-ES", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+    weekday: "short",
+    day: "2-digit",
+    month: "2-digit",
   });
 
-  return formatedDate;
+  return formatedDate.toUpperCase();
 };
