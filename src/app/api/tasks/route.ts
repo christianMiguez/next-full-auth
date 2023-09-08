@@ -4,10 +4,26 @@ import { prisma } from "@/lib/prisma.adapter";
 import { Task } from "@prisma/client";
 
 export async function GET() {
+  const currentUser = await getCurrentUser();
+  console.log({ currentUser });
+
+  if (!currentUser) {
+    return NextResponse.json(
+      {
+        message: "no user. please login",
+      },
+      {
+        status: 401,
+      }
+    );
+  }
   try {
     const tasks = await prisma.task.findMany({
       orderBy: {
         updatedAt: "desc",
+      },
+      where: {
+        userId: currentUser.id,
       },
     });
 
