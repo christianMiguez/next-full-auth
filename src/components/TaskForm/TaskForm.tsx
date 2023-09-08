@@ -38,6 +38,8 @@ export const TaskForm = () => {
       })
         .then((res) => res.json())
         .then((data) => {
+          console.log(data);
+          reset();
           router.refresh();
         });
     } catch (error: any) {
