@@ -4,11 +4,17 @@ import { Task } from "@prisma/client";
 import { headers } from "next/headers";
 
 async function loadTasks() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tasks`, {
+  let fetchConfig: any = {
     cache: "no-store",
     method: "GET",
-    headers: headers(),
-  });
+  };
+  if (process.env.NODE_ENV === "development") {
+    fetchConfig = {
+      ...fetchConfig,
+      headers: headers(),
+    };
+  }
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tasks`);
   const data = await res.json();
   return data;
 }
