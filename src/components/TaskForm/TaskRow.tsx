@@ -21,7 +21,6 @@ const TaskRow = ({ task }: TaskRowProps) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          router.push("/tasks");
           router.refresh();
         });
     } catch (error: any) {
