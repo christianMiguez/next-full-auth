@@ -14,7 +14,7 @@ const getTasks = async () => {
     `${process.env.NEXT_PUBLIC_URL}/api/tasks`,
     fetchConfig
   );
-  const data = await res.json();
+  const data = res.json();
   return data;
 };
 

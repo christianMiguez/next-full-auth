@@ -14,7 +14,7 @@
 
 "@auth/core@0.13.0":
   version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@auth/core/-/core-0.13.0.tgz#87566254a103a9b6dcc43177fd50c9ab4ac2238f"
+  resolved "https://registry.npmjs.org/@auth/core/-/core-0.13.0.tgz"
   integrity sha512-StjrzUenaKfMr68kmvhiqfY0xvxRvg8wllmem9JAULpPAAAt3uwRUDXICWOP/PfWB4OZ2wQT7rgfm0n42b+Mjg==
   dependencies:
     "@panva/hkdf" "^1.0.4"
@@ -45,7 +45,7 @@
 
 "@auth/prisma-adapter@^1.0.2":
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@auth/prisma-adapter/-/prisma-adapter-1.0.2.tgz#c3ec03005abb3ccde3b88abeaecb5b3f8c9d138c"
+  resolved "https://registry.npmjs.org/@auth/prisma-adapter/-/prisma-adapter-1.0.2.tgz"
   integrity sha512-ZD6ezxpt0eFFWq6rHloeCplBBDTUDczlgXfopeVxniQ8c1KKsgWBRJuA0mrQAIn3/TFDKI7AxN1bYwc8DzDgCg==
   dependencies:
     "@auth/core" "0.13.0"
@@ -91,14 +91,14 @@
 
 "@floating-ui/core@^1.4.1":
   version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.4.1.tgz#0d633f4b76052668afb932492ac452f7ebe97f17"
+  resolved "https://registry.npmjs.org/@floating-ui/core/-/core-1.4.1.tgz"
   integrity sha512-jk3WqquEJRlcyu7997NtR5PibI+y5bi+LS3hPmguVClypenMsCY3CBa3LAQnozRCtCrYWSEtAdiskpamuJRFOQ==
   dependencies:
     "@floating-ui/utils" "^0.1.1"
 
 "@floating-ui/dom@^1.5.1":
   version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.5.1.tgz#88b70defd002fe851f17b4a25efb2d3c04d7a8d7"
+  resolved "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.5.1.tgz"
   integrity sha512-KwvVcPSXg6mQygvA1TjbN/gh///36kKtllIF8SUm0qpFj8+rvYrpvlYdL1JoA71SHpDqgSSdGOSoQ0Mp3uY5aw==
   dependencies:
     "@floating-ui/core" "^1.4.1"
@@ -106,14 +106,14 @@
 
 "@floating-ui/react-dom@^2.0.1":
   version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@floating-ui/react-dom/-/react-dom-2.0.2.tgz#fab244d64db08e6bed7be4b5fcce65315ef44d20"
+  resolved "https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.0.2.tgz"
   integrity sha512-5qhlDvjaLmAst/rKb3VdlCinwTF4EYMiVxuuc/HVUjs46W0zgtbMmAZ1UTsDrRTxRmUEzl92mOtWbeeXL26lSQ==
   dependencies:
     "@floating-ui/dom" "^1.5.1"
 
 "@floating-ui/react@^0.24.3":
   version "0.24.8"
-  resolved "https://registry.yarnpkg.com/@floating-ui/react/-/react-0.24.8.tgz#e079e2836990be3fce9665ab509360a5447251a1"
+  resolved "https://registry.npmjs.org/@floating-ui/react/-/react-0.24.8.tgz"
   integrity sha512-AuYeDoaR8jtUlUXtZ1IJ/6jtBkGnSpJXbGNzokBL87VDJ8opMq1Bgrc0szhK482ReQY6KZsMoZCVSb4xwalkBA==
   dependencies:
     "@floating-ui/react-dom" "^2.0.1"
@@ -122,7 +122,7 @@
 
 "@floating-ui/utils@^0.1.1":
   version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.1.tgz#1a5b1959a528e374e8037c4396c3e825d6cf4a83"
+  resolved "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.1.1.tgz"
   integrity sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==
 
 "@humanwhocodes/config-array@^0.11.10":
@@ -268,12 +268,12 @@
 
 "@popperjs/core@^2.9.3":
   version "2.11.8"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
+  resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
 "@prisma/client@^5.2.0":
   version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-5.2.0.tgz#cbfdd440614b38736563a7999f39922fcde0ed50"
+  resolved "https://registry.npmjs.org/@prisma/client/-/client-5.2.0.tgz"
   integrity sha512-AiTjJwR4J5Rh6Z/9ZKrBBLel3/5DzUNntMohOy7yObVnVoTNVFi2kvpLZlFuKO50d7yDspOtW6XBpiAd0BVXbQ==
   dependencies:
     "@prisma/engines-version" "5.2.0-25.2804dc98259d2ea960602aca6b8e7fdc03c1758f"
@@ -451,7 +451,7 @@ argparse@^2.0.1:
 
 aria-hidden@^1.2.3:
   version "1.2.3"
-  resolved "https://registry.yarnpkg.com/aria-hidden/-/aria-hidden-1.2.3.tgz#14aeb7fb692bbb72d69bebfa47279c1fd725e954"
+  resolved "https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.3.tgz"
   integrity sha512-xcLxITLe2HYa1cnYnwCjkOO1PqUHQpozB8x9AR0OgWN2woOBi5kSDVxKfd0b7sb1hw5qFeJhXm9H1nu3xSfLeQ==
   dependencies:
     tslib "^2.0.0"
@@ -677,7 +677,7 @@ chokidar@^3.5.3:
 
 classnames@^2.2.6:
   version "2.3.2"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
+  resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.2.tgz"
   integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
 
 client-only@0.0.1:
@@ -738,7 +738,7 @@ damerau-levenshtein@^1.0.8:
 
 debounce@^1.2.0:
   version "1.2.1"
-  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.1.tgz#38881d8f4166a5c5848020c11827b834bcb3e0a5"
+  resolved "https://registry.npmjs.org/debounce/-/debounce-1.2.1.tgz"
   integrity sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==
 
 debug@^3.2.7:
@@ -806,7 +806,7 @@ doctrine@^3.0.0:
 
 easy-bem@^1.1.1:
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/easy-bem/-/easy-bem-1.1.1.tgz#1bfcc10425498090bcfddc0f9c000aba91399e03"
+  resolved "https://registry.npmjs.org/easy-bem/-/easy-bem-1.1.1.tgz"
   integrity sha512-GJRqdiy2h+EXy6a8E6R+ubmqUM08BK0FWNq41k24fup6045biQ8NXxoXimiwegMQvFFV3t1emADdGNL1TlS61A==
 
 electron-to-chromium@^1.4.477:
@@ -1203,7 +1203,7 @@ flatted@^3.2.7:
 
 flowbite-react@^0.5.0:
   version "0.5.0"
-  resolved "https://registry.yarnpkg.com/flowbite-react/-/flowbite-react-0.5.0.tgz#ff9f4930be93c119038a5b6331462096fe88205f"
+  resolved "https://registry.npmjs.org/flowbite-react/-/flowbite-react-0.5.0.tgz"
   integrity sha512-OoJ0Dbv0ZuunTkPwa802wL3kalUWQ7YBh1t4It5uVfAYs5KUvOqhXIygdlVMawnmq3+xkMPbUZkWh1sDxVb3nw==
   dependencies:
     "@floating-ui/react" "^0.24.3"
@@ -1214,7 +1214,7 @@ flowbite-react@^0.5.0:
 
 flowbite@^1.6.6, flowbite@^1.8.1:
   version "1.8.1"
-  resolved "https://registry.yarnpkg.com/flowbite/-/flowbite-1.8.1.tgz#a1f5fb039c4c275414a457089b4917a67e9153a5"
+  resolved "https://registry.npmjs.org/flowbite/-/flowbite-1.8.1.tgz"
   integrity sha512-lXTcO8a6dRTPFpINyOLcATCN/pK1Of/jY4PryklPllAiqH64tSDUsOdQpar3TO59ZXWwugm2e92oaqwH6X90Xg==
   dependencies:
     "@popperjs/core" "^2.9.3"
@@ -1787,7 +1787,7 @@ micromatch@^4.0.4, micromatch@^4.0.5:
 
 mini-svg-data-uri@^1.4.3:
   version "1.4.4"
-  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz#8ab0aabcdf8c29ad5693ca595af19dd2ead09939"
+  resolved "https://registry.npmjs.org/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz"
   integrity sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==
 
 minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.2:
@@ -2175,7 +2175,7 @@ pretty-format@^3.8.0:
 
 prisma@^5.2.0:
   version "5.2.0"
-  resolved "https://registry.yarnpkg.com/prisma/-/prisma-5.2.0.tgz#a302dc2635cdec1d22d552ece837fb29a03563b9"
+  resolved "https://registry.npmjs.org/prisma/-/prisma-5.2.0.tgz"
   integrity sha512-FfFlpjVCkZwrqxDnP4smlNYSH1so+CbfjgdpioFzGGqlQAEm6VHAYSzV7jJgC3ebtY9dNOhDMS2+4/1DDSM7bQ==
   dependencies:
     "@prisma/engines" "5.2.0"
@@ -2209,17 +2209,17 @@ react-dom@18.2.0:
 
 react-hook-form@^7.46.1:
   version "7.46.1"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.46.1.tgz#39347dbff19d980cb41087ac32a57abdc6045bb3"
+  resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.46.1.tgz"
   integrity sha512-0GfI31LRTBd5tqbXMGXT1Rdsv3rnvy0FjEk8Gn9/4tp6+s77T7DPZuGEpBRXOauL+NhyGT5iaXzdIM2R6F/E+w==
 
 react-icons@^4.10.1:
   version "4.11.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.11.0.tgz#4b0e31c9bfc919608095cc429c4f1846f4d66c65"
+  resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.11.0.tgz"
   integrity sha512-V+4khzYcE5EBk/BvcuYRq6V/osf11ODUM2J8hg2FDSswRrGvqiYUYPRy4OdrWaQOBj4NcpJfmHZLNaD+VH0TyA==
 
 react-indiana-drag-scroll@^2.2.0:
   version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-indiana-drag-scroll/-/react-indiana-drag-scroll-2.2.0.tgz#657e14bbdf4888cc738e9fa8dc4384d76c348c0b"
+  resolved "https://registry.npmjs.org/react-indiana-drag-scroll/-/react-indiana-drag-scroll-2.2.0.tgz"
   integrity sha512-+W/3B2OQV0FrbdnsoIo4dww/xpH0MUQJz6ziQb7H+oBko3OCbXuzDFYnho6v6yhGrYDNWYPuFUewb89IONEl/A==
   dependencies:
     classnames "^2.2.6"
@@ -2511,12 +2511,12 @@ supports-preserve-symlinks-flag@^1.0.0:
 
 tabbable@^6.0.1:
   version "6.2.0"
-  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-6.2.0.tgz#732fb62bc0175cfcec257330be187dcfba1f3b97"
+  resolved "https://registry.npmjs.org/tabbable/-/tabbable-6.2.0.tgz"
   integrity sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==
 
 tailwind-merge@^1.13.2:
   version "1.14.0"
-  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.14.0.tgz#e677f55d864edc6794562c63f5001f45093cdb8b"
+  resolved "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-1.14.0.tgz"
   integrity sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==
 
 tailwindcss@3.3.3:
