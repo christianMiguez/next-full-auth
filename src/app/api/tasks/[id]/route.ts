@@ -9,7 +9,6 @@ interface Params {
   };
 }
 
-export const dynamic = "force-dynamic";
 export async function GET(request: Request, { params }: Params) {
   const currentUser = await getCurrentUser();
 
