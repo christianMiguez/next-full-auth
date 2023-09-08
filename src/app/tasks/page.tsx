@@ -1,28 +1,10 @@
 import { TaskForm } from "@/components/TaskForm/TaskForm";
 import TaskRow from "@/components/TaskForm/TaskRow";
+import getTasks from "@/utils/getTasks";
 import { Task } from "@prisma/client";
-import { headers } from "next/headers";
-
-async function loadTasks() {
-  let fetchConfig: any = {
-    method: "GET",
-  };
-  if (process.env.NODE_ENV !== "production") {
-    fetchConfig = {
-      ...fetchConfig,
-      headers: headers(),
-    };
-  }
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api/tasks`,
-    fetchConfig
-  );
-  const data = await res.json();
-  return data;
-}
 
 const TasksPage = async () => {
-  const tasks = await loadTasks();
+  const tasks = await getTasks();
   return (
     <div className="w-[95%] max-w-[800px] mx-auto my-4">
       <TaskForm />
