@@ -1,3 +1,4 @@
+"use client";
 import { Task } from "@prisma/client";
 import { useState, useEffect } from "react";
 import { TaskForm } from "./TaskForm/TaskForm";
