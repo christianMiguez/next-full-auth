@@ -1,15 +1,11 @@
 "use client";
 import { Task } from "@prisma/client";
-import { useEffect, useState } from "react";
-import TaskRow from "../TaskForm/TaskRow";
-import Spinner from "../../UI/Spinner/Spinner";
+import TaskRow from "@/components/Tasks/TaskForm/TaskRow";
+import Spinner from "@/components/UI/Spinner/Spinner";
+import { useGetTasksQuery } from "@/redux/services/taskApi";
 
-interface TaskTableProps {
-  tasks: Task[];
-  loading: boolean;
-}
-
-function TaskTable({ tasks, loading }: TaskTableProps) {
+function TaskTable() {
+  const { data: tasks, isLoading, isFetching } = useGetTasksQuery(null);
   return (
     <table className="rounded-l-md rounded-r-md overflow-hidden w-full text-sm text-left text-gray-500 ">
       <thead className="text-xs  text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 ">
@@ -27,7 +23,7 @@ function TaskTable({ tasks, loading }: TaskTableProps) {
         </tr>
       </thead>
       <tbody>
-        {loading ? (
+        {isLoading || isFetching ? (
           <tr>
             <td colSpan={4} className="text-center text-white py-4 ">
               <Spinner
@@ -38,7 +34,7 @@ function TaskTable({ tasks, loading }: TaskTableProps) {
               />
             </td>
           </tr>
-        ) : tasks.length ? (
+        ) : tasks?.length ? (
           tasks.map((task: Task) => <TaskRow task={task} key={task.id} />)
         ) : (
           <tr>

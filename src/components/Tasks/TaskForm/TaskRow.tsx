@@ -3,8 +3,8 @@
 import { getFormatedDate } from "@/utils";
 import { Task } from "@prisma/client";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import IconDelete from "../../UI/Icons/IconDelete";
+import IconDelete from "@/components/UI/Icons/IconDelete";
+import { useDeleteTaskMutation } from "@/redux/services/taskApi";
 
 interface TaskRowProps {
   task: Task;
@@ -14,19 +14,7 @@ const TaskRow = ({ task }: TaskRowProps) => {
   const router = useRouter();
   const formatedDate = getFormatedDate(new Date(task.createdAt));
 
-  const handleDelete = async () => {
-    try {
-      await fetch(`/api/tasks/${task.id}`, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          router.refresh();
-        });
-    } catch (error: any) {
-      console.log(error.message);
-    }
-  };
+  const [deleteTask] = useDeleteTaskMutation();
 
   return (
     <tr key={task.id} className="bg-slate-800 p-3">
@@ -42,7 +30,7 @@ const TaskRow = ({ task }: TaskRowProps) => {
           Editar
         </button>
         <button
-          onClick={handleDelete}
+          onClick={() => deleteTask({ id: task.id })}
           className="text-white py-2 px-4 bg-red-600 text-center rounded-md hover:scale-105"
         >
           <IconDelete />

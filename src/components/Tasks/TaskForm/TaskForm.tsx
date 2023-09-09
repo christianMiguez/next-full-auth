@@ -2,6 +2,10 @@
 import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useForm } from "react-hook-form";
+import {
+  useCreateTaskMutation,
+  useUpdateTaskMutation,
+} from "@/redux/services/taskApi";
 
 export const TaskForm = () => {
   const router = useRouter();
@@ -10,6 +14,9 @@ export const TaskForm = () => {
     title: "",
     content: "",
   });
+
+  const [createTask] = useCreateTaskMutation();
+  const [updateTask] = useUpdateTaskMutation();
 
   const {
     register,
@@ -22,50 +29,6 @@ export const TaskForm = () => {
       content: currentTask.content,
     },
   });
-
-  interface FormValuesProps {
-    [key: string]: string;
-  }
-
-  const createTask = async ({ title, content }: FormValuesProps) => {
-    try {
-      await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tasks`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ title, content }),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          reset();
-          router.refresh();
-        });
-    } catch (error: any) {
-      console.log(error.message);
-    }
-  };
-
-  const updateTask = async ({ title, content }: FormValuesProps) => {
-    try {
-      await fetch(`${process.env.NEXT_PUBLIC_URL}/api/tasks/${taskId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ title, content }),
-        cache: "no-store",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          router.push("/tasks");
-          router.refresh();
-        });
-    } catch (error: any) {
-      console.log(error.message);
-    }
-  };
 
   useEffect(() => {
     if (taskId) {
@@ -83,6 +46,7 @@ export const TaskForm = () => {
       onSubmit={handleSubmit((data) => {
         console.log(data);
         taskId ? updateTask(data) : createTask(data);
+        taskId ? router.push("/tasks") : reset();
       })}
       className="mb-6"
     >

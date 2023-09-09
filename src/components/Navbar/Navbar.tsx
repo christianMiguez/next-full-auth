@@ -56,27 +56,6 @@ export const Navbar = () => {
             </>
           )}
         </div>
-
-        <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-user"
-        >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-black dark:border-gray-700">
-            {session && (
-              <li>
-                <Link
-                  href="/tasks"
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                  aria-current="page"
-                >
-                  Tasks
-                </Link>
-              </li>
-            )}
-            <li>Protected (Server)</li>
-            <li>Protected (Client)</li>
-          </ul>
-        </div>
       </div>
     </nav>
   );
