@@ -68,14 +68,14 @@ export const TaskForm = () => {
           // onChange={(e) => setTitle(e.target.value)}
           {...register("title", {
             required: true,
-            minLength: 5,
+            minLength: 3,
           })}
         />
         {errors.title && (
           <span className="text-red-500 text-xs block -mt-2 mb-3">
             {errors.title.type === "required"
               ? "This field is required"
-              : "Min length 5 characters"}
+              : "Min length 3 characters"}
           </span>
         )}
       </div>
@@ -95,14 +95,14 @@ export const TaskForm = () => {
         // onChange={(e) => setContent(e.target.value)}
         {...register("content", {
           required: true,
-          minLength: 20,
+          minLength: 5,
         })}
       ></textarea>
       {errors.content && (
         <span className="text-red-500 text-xs block -mt-2 mb-3">
           {errors.content.type === "required"
             ? "This field is required"
-            : "Min length 25 characters"}
+            : "Min length 5 characters"}
         </span>
       )}
 
